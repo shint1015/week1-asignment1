@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment1</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="container">
+            <h1>Student Manager</h1>
+            <p class="subtitle">Add students, browse users, and view details in smooth modals.</p>
+        </header>
+
+        <main class="container grid">
+            <h1 id="student-average"></h1>
+            <section class="card">
+                <h2 class="card-title">Add Student</h2>
+                <form id="form" class="form">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Alice" />
+                    </div>
+                    <div class="field">
+                        <label for="grade">Grade</label>
+                        <input
+                            type="number"
+                            id="grade"
+                            name="grade"
+                            placeholder="0 - 100"
+                            min="0"
+                            max="100"
+                        />
+                    </div>
+                    <div class="actions">
+                        <button type="submit" class="btn primary">Submit</button>
+                        <button type="button" id="save-btn" class="btn">Save</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2 class="card-title">Students</h2>
+                <div id="student-list" class="list"></div>
+            </section>
+
+            <section class="card span-2">
+                <div class="flex-between">
+                    <h2 class="card-title">API Users</h2>
+                    <div id="api-student-count" class="muted"></div>
+                </div>
+                <div id="student-api-list">
+                    <div id="api-students" class="grid users"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- App (alert-like) Modal -->
+        <div
+            id="app-modal"
+            class="modal-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="app-modal-title"
+            aria-describedby="app-modal-message"
+        >
+            <div class="modal" role="document">
+                <header class="modal-header">
+                    <h3 id="app-modal-title">Message</h3>
+                    <button class="icon-btn" data-close-modal aria-label="Close">×</button>
+                </header>
+                <div class="modal-body">
+                    <p id="app-modal-message"></p>
+                </div>
+                <footer class="modal-footer">
+                    <button id="app-modal-ok" class="btn primary">OK</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- User Detail Modal -->
+        <div
+            id="user-detail-modal"
+            class="modal-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="user-detail-title"
+        >
+            <div class="modal" role="document">
+                <header class="modal-header">
+                    <h3 id="user-detail-title">User Details</h3>
+                    <button id="close-modal-btn" class="icon-btn" aria-label="Close">×</button>
+                </header>
+                <div id="user-detail-content" class="modal-body"></div>
+            </div>
+        </div>
+
+        <script src="app.js" defer></script>
+    </body>
+</html>

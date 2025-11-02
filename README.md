@@ -1,4 +1,4 @@
-# Student Manager (UI + Modals)
+# week1-asignment1(Student Manager (UI + Modals))
 
 Small app to add students, save to localStorage, and browse API users with smooth, animated modals.
 
@@ -16,4 +16,3 @@ Small app to add students, save to localStorage, and browse API users with smoot
 ## Run
 
 Open `index.html` in a browser (or a simple static server like VS Code Live Server).
-# week1-asignment1
